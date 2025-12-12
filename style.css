@@ -78,10 +78,10 @@ main {
   
   .music-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     padding: 2rem;
-    max-width: 900px;
+    max-width: 600px;
     margin: 0 auto;
   }
   
@@ -89,9 +89,9 @@ main {
     width: 100%;
     height: auto;
     /* object-fit: cover;
-    border-radius: 12px; 
+    border-radius: 12px; */
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    transition: transform 0.2s ease, box-shadow 0.2s ease; */
+    /* transition: transform 0.2s ease, box-shadow 0.2s ease; */ 
     cursor: pointer;
   }
   
@@ -100,4 +100,80 @@ main {
     transform: scale(1.05);
     box-shadow: 0 6px 14px rgba(0,0,0,0.35);
   } */
+
+  .music-background {
+    position: fixed;           /* stays in place even when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;             /* full browser height */
+    z-index: -1;               /* behind everything */
+    overflow: hidden;          /* hide overflow edges */
+  }
   
+  .music-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* fills the whole window without distortion */
+    opacity: 50%;
+  }
+
+  /* Container */
+  .about-page {
+    margin: 0;
+    padding: 0;
+    background: #000;
+  }
+  
+
+  .floating-videos {
+  position: relative;
+  transform: translateY(-50px);
+  width: 100%;
+  height: 100%;
+}
+
+/* Base style for all videos */
+.floating-videos video {
+  position: absolute;
+  width: 340px;
+  /* border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  object-fit: cover; */
+}
+
+/* INDIVIDUAL VIDEO POSITIONS */
+.floating-videos video:nth-child(1) {
+  top: 6%;
+  left: 12%;
+}
+
+.floating-videos video:nth-child(2) {
+  top: 20%;
+  left: 55%;
+}
+
+.floating-videos video:nth-child(3) {
+  top: 55%;
+  left: 70%;
+}
+
+.floating-videos video:nth-child(4) {
+  top: 68%;
+  left: 35%;
+}
+
+.floating-videos video:nth-child(5) {
+  top: 35%;
+  left: 20%;
+}
+
+.floating-videos video:nth-child(6) {
+  top: 10%;
+  left: 75%;
+}
+
+.floating-videos video:nth-child(7) {
+  top: 60%;
+  left: 5%;
+}
